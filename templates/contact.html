@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock title %}
+{% block body %}
 <body>
 <div class="container">
     <form method="post" action="/contact">
@@ -29,4 +26,4 @@
     </form>
     </div>
 </body>
-</html>
+{% endblock body %}
