@@ -24,6 +24,6 @@ def contact(request):
         email = request.POST.get('email')
         phone = request.POST.get('phone')
         desc = request.POST.get('desc')
-        contacts = Contact(name=name, email=email, phone=phone, text=desc, date=datetime.today())
+        contacts = Contact(name=name, email=email, phone=phone, desc=desc, date=datetime.today())
         contacts.save()
     return render(request, 'contact.html')
