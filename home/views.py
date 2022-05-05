@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, logout, login
 from home.models import Contact
@@ -22,6 +24,6 @@ def contact(request):
         email = request.POST.get('email')
         phone = request.POST.get('phone')
         desc = request.POST.get('desc')
-        contacts = Contact(name, email, phone, desc)
+        contacts = Contact(name=name, email=email, phone=phone, text=desc, date=datetime.today())
         contacts.save()
     return render(request, 'contact.html')
